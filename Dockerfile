@@ -10,4 +10,7 @@ ENV username=""
 ENV password=""
 
 EXPOSE 8888
-ENTRYPOINT ["sh","-c","java -jar /app/experiment-config-server.jar --spring.security.user.name=$username --spring.security.user.password=$password --spring.cloud.config.server.native.searchlocations=$config_location"]
+ENTRYPOINT ["sh","-c","java -jar /app/experiment-config-server.jar \
+--spring.security.user.name=$username --spring.security.user.password=$password \
+--spring.cloud.config.server.native.searchlocations=$config_location \
+--eureka.client.serviceUrl.defaultZone=$eureka_host"]

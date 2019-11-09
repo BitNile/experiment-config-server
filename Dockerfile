@@ -8,6 +8,8 @@ ADD ./target/experiment-config-server.jar /app/
 
 ENV username=""
 ENV password=""
+ENV config_location=""
+ENV eureka_host=""
 
 EXPOSE 8888
 ENTRYPOINT ["sh","-c","java -jar /app/experiment-config-server.jar \

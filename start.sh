@@ -1,0 +1,1 @@
+docker run -d -e username="hecenjie" -e password="980704" -e config_location="file:/opt" -v /Users/hecenjie/Projects/experiment-config:/opt -p 8888:8888 experiment-config-server:local5
